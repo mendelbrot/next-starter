@@ -1,18 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config, options) => {
-    config.module.rules.push({
-      test: /\.csv$/,
-      loader: 'csv-loader',
-      options: {
-        dynamicTyping: true,
-        header: true,
-        skipEmptyLines: true,
-      },
-    })
+    webpack: (config, options) => {
+        config.module.rules.push({
+            test: /\.csv$/,
+            loader: "csv-loader",
+            options: {
+                dynamicTyping: true,
+                header: true,
+                skipEmptyLines: true,
+            },
+        });
 
-    return config
-  },
-}
+        return config;
+    },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

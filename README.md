@@ -2,9 +2,9 @@ This is a Next.js starter project.
 
 ## tools
 
-* tailwind
-* prettier
-* rust / wasm
+-   tailwind
+-   prettier
+-   rust / wasm
 
 ## Getting Started
 
@@ -12,4 +12,3 @@ This is a Next.js starter project.
 npm install
 npm run dev
 ```
-
