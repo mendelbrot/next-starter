@@ -1,3 +1,5 @@
+import { greet, fibonacci } from "@@/rust_lib";
+
 export default function Home() {
     return (
         <main>
