@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Nav from "@/components/nav";
 
 export const metadata: Metadata = {
-    title: "starter",
-    description: "starter project",
+    title: "next starter",
+    description: "starter next.js app",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

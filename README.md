@@ -4,7 +4,6 @@ This is a Next.js starter project.
 
 -   tailwind
 -   prettier
--   rust / wasm
 
 ## Getting Started
 
