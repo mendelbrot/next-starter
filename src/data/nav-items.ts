@@ -1,8 +1,8 @@
 const navItems = [
-    {
-        url: "/",
-        label: "Home",
-    },
+  {
+    url: "/",
+    label: "Home",
+  },
 ];
 
 export default navItems;

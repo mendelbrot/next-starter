@@ -2,8 +2,8 @@ This is a Next.js starter project.
 
 ## tools
 
--   tailwind
--   prettier
+- tailwind
+- prettier
 
 ## Getting Started
 
