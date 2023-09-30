@@ -19,37 +19,35 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        const user = { id: "1", name: "greg", email: "greg@home.com" };
-        return user;
-        // if (!credentials?.email || !credentials.password) {
-        //   return null;
-        // }
+        if (!credentials?.email || !credentials.password) {
+          return null;
+        }
 
-        // const user = await prisma.user.findUnique({
-        //   where: {
-        //     email: credentials.email,
-        //   },
-        // });
+        const user = await prisma.user.findUnique({
+          where: {
+            email: credentials.email,
+          },
+        });
 
-        // if (!user) {
-        //   return null;
-        // }
+        if (!user) {
+          return null;
+        }
 
-        // const isPasswordValid = await compare(
-        //   credentials.password,
-        //   user.password,
-        // );
+        const isPasswordValid = await compare(
+          credentials.password,
+          user.password,
+        );
 
-        // if (!isPasswordValid) {
-        //   return null;
-        // }
+        if (!isPasswordValid) {
+          return null;
+        }
 
-        // return {
-        //   id: user.id + "",
-        //   email: user.email,
-        //   name: user.name,
-        //   randomKey: "Hey cool",
-        // };
+        return {
+          id: user.id + "",
+          email: user.email,
+          name: user.name,
+          randomKey: "Hey cool",
+        };
       },
     }),
   ],

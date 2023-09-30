@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]/route";
+import { User } from "./user";
 
 export default async function Home() {
 
@@ -17,7 +18,10 @@ export default async function Home() {
       <div className="prose max-w-prose">
         <p>Hello, {user?.name}</p>
         <p>Welcome to this starter project.</p>
+        <h2>Server side call</h2>
         <pre>{JSON.stringify(session)}</pre>
+        <h2>Client side call</h2>
+        <User />
       </div>
     </main>
   );
