@@ -6,6 +6,8 @@ This is a Next.js starter project.
 - prettier
 - prisma
 - postgres
+- testing
+- a rust server (rocket)
 
 ## prisma
 https://www.youtube.com/watch?v=_ER9jHiylAo&t=0s
