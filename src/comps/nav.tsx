@@ -3,6 +3,7 @@
 import Link from "next/link";
 import navItems from "@/data/nav-items";
 import { usePathname } from "next/navigation";
+import { LoginButton, LogoutButton } from "@/comps/auth";
 
 const Nav = () => {
   const pathname = usePathname();
@@ -20,6 +21,8 @@ const Nav = () => {
           {item.label}
         </Link>
       ))}
+      <LoginButton />
+      <LogoutButton />
     </div>
   );
 };
