@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]/route";
 import { User } from "./user";
+import Link from "next/link";
 
 export default async function Home() {
 
@@ -22,6 +23,7 @@ export default async function Home() {
         <pre>{JSON.stringify(session)}</pre>
         <h2>Client side call</h2>
         <User />
+        <Link href="/about">About</Link>
       </div>
     </main>
   );
